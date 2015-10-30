@@ -9,12 +9,24 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>RsvpFrom</title>
+    <title>RsvpForm</title>
 </head>
 <body>
     @using (Html.BeginForm())
     {
-       <p>imie i nazwisko: @Html.TextBoxFor(x => x.Name)</p> 
+        <p>imie i nazwisko: @Html.TextBoxFor(x => x.Name)</p>
+        <p> email @Html.TextBoxFor(x => x.Email)</p>
+        
+        <p>telefon @Html.TextBoxFor(x => x.Phone) </p>
+        <p>czy przybedziesz? 
+            @Html.DropDownListFor(x => x.WillAttend, new[] 
+            { 
+                new SelectListItem() {Text = "tak", Value = bool.TrueString},
+                new SelectListItem {Text = "nie", Value = bool.FalseString}           
+            })
+        </p>
+        <input type = "reset" value="wyslij"/>
     }
+
 </body>
 </html>

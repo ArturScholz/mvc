@@ -23,7 +23,7 @@ namespace mvc.Controllers
             return View();
         }
 
-        public ViewResult RsvpFrom()
+        public ViewResult RsvpForm()
         {
             return View();
         }
