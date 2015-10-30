@@ -10,8 +10,20 @@ namespace mvc.Controllers
     {
         //
         // GET: /Home/
-
+        public string test = "testowy napis";
         public ActionResult Index()
+        {
+            int hour = DateTime.Now.Hour;
+
+            if (hour < 17)
+                ViewBag.Message = "goood moornig vieeetnaaam!";
+            else
+                ViewBag.Message = "fuck u too";
+            
+            return View();
+        }
+
+        public ViewResult RsvpFrom()
         {
             return View();
         }

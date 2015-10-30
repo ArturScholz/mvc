@@ -1,0 +1,20 @@
+﻿@model mvc.Models.GuestResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RsvpFrom</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+       <p>imie i nazwisko: @Html.TextBoxFor(x => x.Name)</p> 
+    }
+</body>
+</html>
