@@ -14,10 +14,12 @@
 <body>
     @using (Html.BeginForm())
     {
+        @Html.ValidationSummary()
+        
         <p>imie i nazwisko: @Html.TextBoxFor(x => x.Name)</p>
         <p> email @Html.TextBoxFor(x => x.Email)</p>
-        
         <p>telefon @Html.TextBoxFor(x => x.Phone) </p>
+        
         <p>czy przybedziesz? 
             @Html.DropDownListFor(x => x.WillAttend, new[] 
             { 

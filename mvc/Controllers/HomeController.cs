@@ -34,8 +34,10 @@ namespace mvc.Controllers
         [HttpPost] //post == set
         public ViewResult RsvpForm(GuestResponse guestResponse) //zapisane dane sa przechwytywane przez ta metode
         {
-            return View("Thanks", guestResponse); // zbiera dane wpisane w formularz i wprowadza do obiektu guestResponse
-                                                  // THANKS to nazwa widoku! zajebiste!
-        }
+            if (ModelState.IsValid) // sprawdza czy zgadza sie z walidacja okreslona w modelu
+                return View("Thanks", guestResponse); // zbiera dane wpisane w formularz i wprowadza do obiektu guestResponse
+            else                                  // THANKS to nazwa widoku! zajebiste!
+                return View(); // zwraca jescze raz to samo  
+      }
     }
 }

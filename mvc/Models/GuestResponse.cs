@@ -7,8 +7,8 @@ namespace mvc.Models
 {
     public class GuestResponse
     {
-       
-        [Required(AllowEmptyStrings = false, ErrorMessage = "podaj imie i nazwisko:", ErrorMessageResourceName = "Name")]
+        
+        [Required(AllowEmptyStrings = false, ErrorMessage = "podaj imie i nazwisko:")] //kolejna weryfikacja odbywa sie w widoku
         public string Name { get; set; }
         [Required(ErrorMessage="podaj email")]
        // [EmailAddress]
