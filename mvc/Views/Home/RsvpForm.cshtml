@@ -14,7 +14,8 @@
 <body>
     @using (Html.BeginForm())
     {
-        @Html.ValidationSummary()
+        @Html.ValidationSummary() //w kontrolerze ten widok wywoluje sie 2 raz jezeli dane sa zle wpisane. wtedy ten kod sprawda juz wprowadzone dane
+                                  // sa weryfikowane, i z auomatu wypisuje bledy
         
         <p>imie i nazwisko: @Html.TextBoxFor(x => x.Name)</p>
         <p> email @Html.TextBoxFor(x => x.Email)</p>
